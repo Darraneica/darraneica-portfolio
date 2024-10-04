@@ -1,10 +1,29 @@
 /* background */
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{
     font-family: "serif";
     overflow-x: hidden;
 }
+
+.main-content{
+    padding: 100px;
+}
+
+/* header title */
+.header-title{
+    font-family: "Anton SC", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*career title */
+.career-title{
+    font-family: "Anton SC";
+}
+
+/* all things button */
 
 .add-resume-btn{
     display: block;
@@ -13,8 +32,132 @@ body{
     border: none;
     width: 200px;
     background: #0d7685; 
+    font-family:"Poppins";
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.add-resume-btn a{
     color: white;
 }
 
+.add-resume-btn a:hover{
+    color: black;
+}
 
+.btn-primary{
+    background: #0d7685;
+}
+
+/* all things banner + hyperlinks */
+
+a{
+    text-decoration: none;
+}
+
+.banner a{
+    color: black;
+}
+
+.banner, a:hover{
+    color: #0d7685;
+
+}
+
+
+/* gretting misc */
+.greeting-header{
+    font-family: "Anton SC", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+}
+
+.greeting-body{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.change-color{
+    color: #0d7685;
+}
+
+
+/* sub-greeting */
+.sub-greeting{
+    font-family: "Anton SC", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    
+}
+
+.sub-greeting-body{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* skills + card */
+
+.skills{
+    font-family: "Poppins";
+}
+
+.card{
+    position: relative;
+    height: 100%;
+    font-family: "Poppins";
+    text-align: center;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.btn {
+    margin-top: auto; 
+    width: 100%;
+    border-radius: 0;
+}
+
+/* quotes misc */
+.quote-1{
+    color: #0d7685;
+    font-family: "Anton SC";
+    font-size: 80px;
+}
+
+/* contact misc */
+
+.contact-type h1{
+    font-family: "Anton SC";
+    font-size: 40px;
+    color: #0d7685;
+}
+
+.contact-type{
+    font-family: "Poppins";
+}
 /* size adjustments */
+@media(max-width:760px){
+    .home-link, .project-link,.contact-link{
+        font-size: 15px;
+
+    }
+
+    .algorithm-img{
+        display: none;
+
+    }
+
+    .greeting-header,.greeting-body,.sub-greeting,.sub-greeting-body{
+        text-align: center;
+    }
+
+    .main-content .col .card{
+        flex: 100%;
+    }
+}
