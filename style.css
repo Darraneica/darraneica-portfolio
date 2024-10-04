@@ -1,0 +1,20 @@
+/* background */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+body{
+    font-family: "serif";
+    overflow-x: hidden;
+}
+
+.add-resume-btn{
+    display: block;
+    margin: auto;
+    padding: 15px;
+    border: none;
+    width: 200px;
+    background: #0d7685; 
+    color: white;
+}
+
+
+/* size adjustments */
