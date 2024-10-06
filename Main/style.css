@@ -46,7 +46,7 @@ body{
 }
 
 .btn-primary{
-    background: #0d7685;
+    background: #0d7685!important;
 }
 
 /* all things banner + hyperlinks */
@@ -61,7 +61,25 @@ a{
 
 .banner, a:hover{
     color: #0d7685;
+    
 
+}
+
+.home-link, .project-link, .about-link{
+    font-family: "Poppins";
+}
+
+
+.home-link:hover{
+    text-decoration: underline;
+}
+
+.project-link:hover{
+    text-decoration: underline;
+}
+
+.about-link:hover{
+    text-decoration: underline;
 }
 
 
@@ -143,7 +161,7 @@ a{
 }
 /* size adjustments */
 @media(max-width:760px){
-    .home-link, .project-link,.contact-link{
+    .home-link, .project-link,.about-link{
         font-size: 15px;
 
     }
