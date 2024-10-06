@@ -21,6 +21,8 @@ body{
 
 /* all things banner + hyperlinks */
 
+
+
 a{
     text-decoration: none;
 }
@@ -35,7 +37,6 @@ a:hover{
 
 .banner, a:hover{
     color: #0d7685;
-    text-decoration: underline;
 
 }
 
@@ -43,10 +44,26 @@ a:hover{
     font-family: "Poppins";
 }
 
+
+
 .latest-header{
     font-family: "Poppins";
     text-transform: uppercase;
     font-weight: bolder;
+}
+
+.card-title{
+    font-family: "Poppins";
+    font-weight: bolder;
+}
+
+.card-text{
+    font-family: "Poppins";
+}
+
+/* all things button */
+.btn-primary{
+    background: #0d7685!important;
 }
 
 
@@ -69,4 +86,6 @@ a:hover{
     .main-content .col .card{
         flex: 100%;
     }
+
+    
 }
