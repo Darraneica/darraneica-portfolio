@@ -83,7 +83,7 @@
     </div>
     <div class="container contact-type mt-5">
         <h1 class="mb-5">Let's chat!</h1>
-        <form>
+        <form action="send-email.php" method="POST">
             <div class="row">
                 <div class="col-md-6">
                     <label for="name">Name</label>
@@ -101,6 +101,7 @@
             <button type="submit" class="btn btn-primary mt-2">Submit</button>
         </form>
     </div>
+    
     <div class="container credits mt-5">
         <div class="row">
             <div class="col">
@@ -108,6 +109,27 @@
             </div>
         </div>
     </div>
+    <script>
+         (function() {
+            emailjs.init("j9jqzw426E0GZ96DA");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            console.log('Form submitted!');
+
+            emailjs.sendForm('service_j6knsgm', 'template_oqs1buo', this)
+                .then(function() {
+                    console.log('Message sent successfully!');
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    console.error('Failed to send message: ', error);
+                    alert('Failed to send message: ' + JSON.stringify(error));
+                });
+        });
+
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     </div>
 </body>
 </html>
