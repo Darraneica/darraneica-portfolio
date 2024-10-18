@@ -57,7 +57,7 @@
                     <img src="/src/python.jpg" class="card-img-top" alt="image">
                     <div class="card-body">
                         <h5 class="card-title">Python</h5>
-                        <a href="#" class="btn btn-primary">Check it out!</a>
+                        <a href="/Python/python.html" class="btn btn-primary">Check it out!</a>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     <img src="/src/javascript.jpg" class="card-img-top" alt="image">
                     <div class="card-body">
                         <h5 class="card-title">JavaScript</h5>
-                        <a href="#" class="btn btn-primary">Check it out!</a>
+                        <a href="/JavaScript/javascript.html" class="btn btn-primary">Check it out!</a>
 
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     <img src="/src/sql.jpg" class="card-img-top" alt="image">
                     <div class="card-body">
                         <h5 class="card-title">SQL</h5>
-                        <a href="#" class="btn btn-primary">Check it out!</a>
+                        <a href="/SQL/sql.html" class="btn btn-primary">Check it out!</a>
                     </div>
                 </div>
             </div>
@@ -116,8 +116,7 @@
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            console.log('Form submitted!');
-
+            console.log('Form submitted!'); 
             emailjs.sendForm('service_j6knsgm', 'template_oqs1buo', this)
                 .then(function() {
                     console.log('Message sent successfully!');
