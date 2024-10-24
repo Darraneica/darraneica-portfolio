@@ -1,37 +1,4 @@
-/*-----------------------------------------------------------------------------------
 
- Theme Name: Zain
- Theme URI: http://
- Description: The Multi-Purpose Onepage Template
- Author: ui-themez
- Author URI: http://themeforest.net/user/ui-themez
- Version: 1.0
-
- Main Color   : #f1c30f
- main Font    : Rubik , Raleway
-
------------------------------------------------------------------------------------*/
-/* ----------------------------------------------------------------
-
- == Table Of Content
-
-	01 Basics
-	02 Buttons
-	03 Navbar
-	04 Header
-	05 Hero
-	06 Services
-	07 Portfolio
-	08 Blog
-	09 Contact
-	10 Footer
-	11 Responsive
- 
-
----------------------------------------------------------------- */
-/* ----------------------------------------------------------------
-     [ 01 Start Basics ]
------------------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
