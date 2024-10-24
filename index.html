@@ -24,6 +24,8 @@
         <!-- Core Style Css -->
         <link rel="stylesheet" href="css/style.css" />
 
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     </head>
 
     <body>
@@ -504,7 +506,7 @@
                     
                     <div class="col-lg-7">
 
-                        <form class="form" id="contact-form" method="post" action="contact.php">
+                        <form class="form" id="contact-form" method="post">
 
                             <div class="messages"></div>
 
@@ -536,10 +538,11 @@
                                     <div class="col-md-12 text-center">
                                         <button type="submit" class="butn butn-bg"><span>Send Message</span></button>
                                     </div>
-
                                 </div>                             
                             </div>
                         </form>
+                        <!-- Email Form -->
+        <script src="js/email.js"></script>
                     </div>
 
                 </div>
@@ -608,5 +611,6 @@
         <!-- custom scripts -->
         <script src="js/scripts.js"></script>
 
+        
     </body>
 </html>
