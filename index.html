@@ -1,613 +1,202 @@
 <!DOCTYPE html>
- <html lang="zxx">
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darraneica Robinson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
 
-    <head>
+    <canvas class="particles"></canvas>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-    	<!-- Metas -->
-        <meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <header>
+        <nav>
+            <a href="#" class="logo magnetic">Darraneica Robinson</a>
+            <div class="nav-links">
+                <a href="#skills" class="magnetic">Skills</a>
+                <a href="#projects" class="magnetic">Projects</a>
+                <a href="#contact" class="magnetic">Contact</a>
+            </div>
+            <button class="theme-toggle magnetic" aria-label="Toggle theme">🌙</button>
+        </nav>
+    </header>
 
-		<!-- Title  -->
-		<title>Darraneica Robinson - Web Portfolio</title>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="typing parallax-element" data-speed="0.5">Full Stack Developer</h1>
+            <p class="parallax-element" data-speed="0.3">Passionate about creating efficient solutions through web development and data automation. 
+               Specialized in building robust applications and streamlining data processes.</p>
+        </div>
+    </section>
 
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/d-logo.png" />
-
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
-
-		<!-- Plugins -->
-		<link rel="stylesheet" href="css/plugins.css" />
-
-        <!-- Core Style Css -->
-        <link rel="stylesheet" href="css/style.css" />
-
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    </head>
-
-    <body>
-
-    	<!-- =====================================
-    	==== Start Loading -->
-
-    	<div class="loading">
-            <div class="gooey">
-              <span class="dot"></span>
-              <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+    <section class="skills" id="skills">
+        <h2 class="fade-up">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card fade-up glow">
+                <h3>Web Development</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90"></div>
+                </div>
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Bootstrap</span>
+                </div>
+            </div>
+            <div class="skill-card fade-up glow">
+                <h3>Data Management</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85"></div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Data Cleansing</span>
+                    <span class="tag">Data Analysis</span>
+                    <span class="tag">Flask</span>
+                </div>
+            </div>
+            <div class="skill-card fade-up glow">
+                <h3>Automation</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="65"></div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Process Automation</span>
+                    <span class="tag">Scripting</span>
+                    <span class="tag">Task Scheduling</span>
+                </div>
+            </div>
+            <div class="skill-card fade-up glow">
+                <h3>Backend</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="75"></div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">API</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">Flask</span>
+                </div>
             </div>
         </div>
-        
-    	<!-- End Loading ====
-    	======================================= -->
+    </section>
 
-       
-    	<!-- =====================================
-    	==== Start Navbar -->
+    <section class="projects" id="projects">
+        <h2 class="fade-up">Featured Projects</h2>
+        <div class="project-filters fade-up">
+            <button class="filter-btn magnetic active" data-filter="all">All</button>
+            <button class="filter-btn magnetic" data-filter="automation">Automation</button>
+            <button class="filter-btn magnetic" data-filter="web">Web Development</button>
+            <button class="filter-btn magnetic" data-filter="backend">Backend Development</button>
+            <button class="filter-btn magnetic" data-filter="full-stack">Full-Stack Development</button>
+            <button class="filter-btn magnetic" data-filter="technical">Technical</button>
 
-		<nav class="navbar navbar-expand-lg">
-			<div class="container">
-
-            <!-- Logo -->
-            <a class="logo" href="index.html">
-                <img src="img/logo.png" class="img-fluid" alt="logo">          
-            </a>
-
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="icon-bar"><i class="fas fa-bars"></i></span>
-			  </button>
-
-			  <!-- navbar links -->
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			    <ul class="navbar-nav ml-auto">
-			      <li class="nav-item">
-			        <a class="nav-link active" href="#" data-scroll-nav="0">Home</a>
-			      </li>
-			      <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="1">About</a>
-                  </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#" data-scroll-nav="2">Services</a>
-			      </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="3">Portfolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="darraneica_robinson.pdf" target="_blank">Resume</a>
-                  </li>
-			     <!--<li class="nav-item">
-			        <a class="nav-link" href="#" data-scroll-nav="4">Blog</a>
-			      </li>--> 
-			      <li class="nav-item">
-			        <a class="nav-link" href="#" data-scroll-nav="5">Contact</a>
-			      </li>
-			    </ul>
-			  </div>
-			</div>
-		</nav>
-
-    	<!-- End Navbar ====
-    	======================================= -->
-
-
-    	<!-- =====================================
-    	==== Start Header -->
-
-    	<header class="header valign bg-img" data-scroll-index="0" data-overlay-dark="4" data-background="img/bg.png" data-stellar-background-ratio="0.5">
-
-    		<div class="container">
-    			<div class="row">
-    				<div class="full-width text-center caption mt-50">
-    					<h2>Welcome!</h2>
-                        <h1 class="cd-headline push">
-                            <span class="blc">I am</span>
-                            <span class="cd-words-wrapper">
-                              <b class="is-visible">Darraneica Robinson</b>
-                              <b>Full-Stack Developer</b>
-                              <b>Skilled in Frontend & Backend</b>
-                            </span>
-                        </h1>
-                        <a href="#0" class="butn butn-bord mt-30" data-scroll-nav="3">
-                            <span>View Work</span>
-                        </a>
-                        <a href="https://rococo-sfogliatella-22b516.netlify.app/" target="_blank" class="butn butn-light mt-30">
-                            <span>Hire Me!</span>
-                        </a>
-    				</div>
-    			</div>
-    		</div>
-    	</header>
-
-    	<!-- End Header ====
-    	======================================= -->
-
-
-
-        <!-- =====================================
-        ==== Start About -->
-
-        <section class="about" data-scroll-index="1">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 valign">
-
-                        <div class="skills">
-
-                            <div class="section-head">
-                                <h4>About Me</h4>
-                            </div>
-
-                            <div class="skill-item mb-30">
-                                <h6>Full-Stack</h6>
-                                <div class="skill-progress">
-                                    <div class="progres" data-value="50%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item mb-30">
-                                <h6>Frontend</h6>
-                                <div class="skill-progress">
-                                    <div class="progres" data-value="70%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <h6>Backend</h6>
-                                <div class="skill-progress">
-                                    <div class="progres" data-value="60%"></div>
-                                </div>
-                            </div>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card fade-up glow" data-category="full-stack">
+                <div class="project-card-inner">
+                    <img src="/img/healthcare_database.png" alt="Project 1">
+                    <div class="project-content">
+                        <h3>Healthcare Database Tool</h3>
+                        <p>A web-based application developed for managing patient data and utilizing CSV files.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Darraneica/healthcare-mock" target="_blank" class="magnetic"><span>📁</span> View Project</a>
+                            <a href="https://healthcare-mock.onrender.com/" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4 hero-img bg-img" data-background="img/javascript.png"></div>
-
-                    <div class="col-lg-4">
-                        <div class="content">
-                            <h6>Who am i</h6>
-                            <h4>Darraneica.</h4>
-                            <h5>Professional Full-Stack Junior Developer</h5>
-                            <p class="mb-10">I am a full-stack junior developer based in Louisiana with experience in creating websites and applications.</p>
-                            <p>I am passionate about improving the fuction of applications and I am interested in learning new methods and techniques.</p>
-
-                            <div class="social mt-40">
-                                <span>Follow Me :</span>
-                                <a href="https://www.linkedin.com/in/darraneica-robinson-88599a89/" target="_blank"><i class="icofont icofont-brand-linkedin"></i></a>
-                                <a href="https://github.com/DARRANEICA" target="_blank"><i class="icofont icofont-social-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
-
-        <!-- End About ====
-        ======================================= -->
-
-
-
-        <!-- =====================================
-        ==== Start Services -->
-
-        <section class="services section-padding bg-dark" data-scroll-index="2">
-            <div class="container">
-                <div class="row">
-
-                    <div class="section-head text-center col-md-12">
-                        <h4>Services</h4>
-                    </div>
-                    
-                    <div class="col-lg-3 col-md-6">
-                        <div class="item mb-md50">
-                            <i class="icon icofont icofont-paint"></i>
-                            <h6>Web Development</h6>
-                            <p>Create clean and user-friendly interfaces that enhance user experience, 
-                                focusing on intuitive layouts and responsive design.</p>
+            <div class="project-card fade-up glow" data-category="web">
+                <div class="project-card-inner">
+                    <img src="/img/web-scraping.png" alt="Project 2">
+                    <div class="project-content">
+                        <h3>Web Scraping Service Website</h3>
+                        <p>A web scraping service automates data extraction, cleansing, and organization to help businesses track trends and gain valuable insights.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Darraneica/webscraping" target="_blank" class="magnetic"><span>📁</span> View Project</a>
+                            <a href="https://rococo-sfogliatella-22b516.netlify.app/" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="item mb-md50">
-                            <i class="icon icofont icofont-ui-fire-wall"></i>
-                            <h6>API Development</h6>
-                            <p>Develop and integrate APIs to enable seamless communication between applications, ensuring efficient data exchange and enhanced functionality.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="item mb-sm50">
-                            <i class="icon icofont icofont-instrument"></i>
-                            <h6>Web Scraping</h6>
-                            <p>Offer web scraping services to extract and organize data from websites, delivering clean and structured datasets for analysis or business insights.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="item">
-                            <i class="icon icofont icofont-chart-histogram-alt"></i>
-                            <h6>Automation</h6>
-                            <p>Offer automation services to streamline repetitive tasks such as data processing, web scraping, file management, and task scheduling, improving efficiency and productivity.</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
-
-        <!-- End Services ====
-        ======================================= -->
-
-
-
-        <!-- =====================================
-        ==== Start Portfolio -->
-
-        <section class="portfolio section-padding" data-scroll-index="3">
-            <div class="container">
-                <div class="row">
-
-                    <div class="section-head text-center col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                        <h4>Portfolio</h4>
+           <!-- <div class="project-card fade-up glow" data-category="automation">
+                <div class="project-card-inner">
+                    <img src="/img/automation-tool.png" alt="Project 3">
+                    <div class="project-content">
+                        <h3>Automation Tool</h3>
+                        <p>An automation tool that simplifies data extraction, cleansing, and organization, providing accurate insights for better decision-making.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">BeautifulSoup</span>
+                            <span class="tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="magnetic"><span>📁</span> View Project</a>
+                            <a href="#" class="magnetic"><span>💻</span> Live Demo (Not Available) </a>
+                        </div>
                     </div>
-
-                    <!-- filter links -->
-                    <div class="filtering text-center col-sm-12">
-                        <span data-filter='*' class="active">All</span>
-                        <span data-filter='.javascript'>JavaScript</span>
-                        <span data-filter='.python'>Python</span>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                    <!-- gallery -->
-                    <div class="gallery text-center full-width">
-
-                        <!-- gallery item -->
-                        <div class="items javascript">
-                            <div class="item-img">
-                                <img src="img/weather.png" alt="image">
-                                <div class="item-img-overlay valign">
-                                    <div class="overlay-info full-width vertical-center">
-                                        <h6>Weather App</h6>
-                                        <p>This marvelous weather app was created using HTML, CSS, JavaScript. 
-                                            It is also powered by a weather API. 
-                                            You are able to get current weather updates for any location</p>
-                                    </div>
-                                    <a href="https://regal-valkyrie-63039c.netlify.app/" target="_blank">
-                                        <i class="icofont icofont-image"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- gallery item -->
-                        <div class="items javascript">
-                            <div class="item-img">
-                             <img src="img/shopping-website.png" alt="image">
-                                <div class="item-img-overlay valign">
-                                    <div class="overlay-info full-width vertical-center">
-                                        <h6>Shopping Website</h6>
-                                        <p>Basic responsive website coded with HTML and CSS.</p>
-                                    </div>
-                                    <a href="https://jovial-nasturtium-345e1e.netlify.app/" target="_blank">
-                                        <i class="icofont icofont-image"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- gallery item -->
-                        <div class="items width2 javascript">
-                            <div class="item-img">
-                                <img src="img/calculator.png" alt="image"> 
-                                <div class="item-img-overlay valign">
-                                    <div class="overlay-info full-width vertical-center">
-                                        <h6>Calculator</h6>
-                                        <p>This handy calculator was created using HTML, CSS, and JavaScript. 
-                                            This project lets you perform basic arithmetic operations with ease. Fully functional.</p>
-                                    </div>
-                                    <a href="https://effervescent-beignet-8caa2b.netlify.app/" target="_blank">
-                                        <i class="icofont icofont-image"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- gallery item  -->
-                        <div class="items width2 javascript">
-                            <div class="item-img">
-                                <img src="img/newsletter.png" alt="image">
-                                <div class="item-img-overlay valign">
-                                    <div class="overlay-info full-width vertical-center">
-                                        <h6>Newsletter</h6>
-                                        <p>Created a responsive newsletter using HTML, CSS, and JavaScript.</p>
-                                    </div>
-                                    <a href="https://delightful-bienenstitch-5059cf.netlify.app/" target="_blank">
-                                        <i class="icofont icofont-image"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- gallery item -->
-                        <div class="items python">
-                            <div class="item-img">
-                                <img src="img/healthcare_data_analysis.jpg" alt="image">
-                                <div class="item-img-overlay valign">
-                                    <div class="overlay-info full-width vertical-center">
-                                        <h6>Interactive Healthcare Billing Analysis</h6>
-                                        <p>Developed a Flask-based web application to streamline the analysis of healthcare billing data.</p>
-                                    </div>
-                                    <a href="https://data-dashboard-zo86.onrender.com" target="_blank">
-                                        <i class="icofont icofont-image"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- gallery item -->
-                        <div class="items python">
-                            <div class="item-img">
-                                <img src="img/healthcare_database.jpg" alt="image">
-                                <div class="item-img-overlay valign">
-                                    <div class="overlay-info full-width vertical-center">
-                                        <h6>Healthcare Management System</h6>
-                                        <p>A web-based application developed for managing patient data and utilizing CSV files.</p>
-                                    </div>
-                                    <a href="https://healthcare-mock.onrender.com" target="_blank">
-                                        <i class="icofont icofont-image"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- gallery item -->
-                        <div class="items python">
-                            <div class="item-img">
-                                <img src="img/web-scraping.png" alt="image">
-                                <div class="item-img-overlay valign">
-                                    <div class="overlay-info full-width vertical-center">
-                                        <h6>Webscraping Real Estate Project</h6>
-                                        <p>This project involves web scraping real estate data to analyze property listings, including price, location, and features. The data is cleaned, filtered, and visualized to gain insights into market trends.</p>
-                                    </div>
-                                    <a href="https://github.com/Darraneica/realestate-webscraping" target="_blank"">
-                                        <i class="icofont icofont-image"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="contact fade-up" id="contact">
+        <h2>Get in Touch</h2>
+        <form class="contact-form glow" id="contactForm" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message"></span>
             </div>
-        </section>
-
-        <!-- End Portfolio ====
-        ======================================= -->
-
-
-
-        <!-- =====================================
-        ==== Start Blog 
-
-        <section class="blog section-padding bg-dark" data-scroll-index="4">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="section-head text-center col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                        <h4>Our Blog</h4>
-                    </div>
-                    <div class="clearfix full-width"></div>
-
-                    <div class="col-lg-4">
-                        <div class="item mb-md50">
-                            <div class="post-img position-re o-hidden">
-                                <img src="img/blog/01.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <span class="data">
-                                    <a href="#0" class="undecro">WordPress</a>
-                                    <a href="#0" class="undecro">March 21 - 2018</a>
-                                </span>
-                                <h5><a href="#0" class="undecro">Your ideal WordPress theme is here.</a></h5>
-
-                                <a href="#0" class="more mt-30">
-                                    <span>Read More</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="item mb-md50">
-                            <div class="post-img position-re o-hidden">
-                                <img src="img/blog/03.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <span class="data">
-                                    <a href="#0" class="undecro">ThemeForest</a>
-                                    <a href="#0" class="undecro">March 21 - 2018</a>
-                                </span>
-                                <h5><a href="#0" class="undecro">How to improve your business ?</a></h5>
-
-                                <a href="#0" class="more mt-30">
-                                    <span>Read More</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="item">
-                            <div class="post-img position-re o-hidden">
-                                <img src="img/blog/02.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <span class="data">
-                                    <a href="#0" class="undecro">Lifestyle</a>
-                                    <a href="#0" class="undecro">March 21 - 2018</a>
-                                </span>
-                                <h5><a href="#0" class="undecro">Style workspaces for your inspiration.</a></h5>
-
-                                <a href="#0" class="more mt-30">
-                                    <span>Read More</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message"></span>
             </div>
-        </section>-->
-
-        <!-- End Blog ====
-        ======================================= -->
-
-
-
-        <!-- =====================================
-        ==== Start Contact -->
-
-        <section class="contact section-padding" data-scroll-index="5">
-            <div class="container">
-                <div class="row">
-
-                    <div class="section-head text-center col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                        <h4>Contact Us</h4>
-                    </div>
-
-                    <div class="col-lg-5">
-                        <div class="info bg-img mb-md50" data-background="img/map.png">
-                            <div class="item">
-                                <div class="cont">
-                                    <h6>Phone : </h6>
-                                    <a href="tel:+15049408578" target="_blank">
-                                        <p>+1 504 940 8578</p></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="cont">
-                                    <h6>Email : </h6>
-                                    <p>darraneica@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-7">
-
-                        <form class="form" id="contact-form" method="post">
-
-                            <div class="messages"></div>
-
-                            <div class="controls">
-
-                                <div class="row">
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input id="form_name" type="text" name="name" placeholder="Name" required="required">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input id="form_email" type="email" name="email" placeholder="Email" required="required">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input id="form_subject" type="text" name="subject" placeholder="Subject">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <textarea id="form_message" name="message" placeholder="Message" rows="4" required="required"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12 text-center">
-                                        <button type="submit" class="butn butn-bg"><span>Send Message</span></button>
-                                    </div>
-                                </div>                             
-                            </div>
-                        </form>
-                        <!-- Email Form -->
-        <script src="js/email.js"></script>
-                    </div>
-
-                </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error-message"></span>
             </div>
-        </section>
+            <input type="hidden" name="_subject" value="New message from your portfolio">
+            <button type="submit" class="magnetic">
+                <span>Send Message</span>
+                <span class="button-icon">📨</span>
+            </button>
+        </form>
+    </section>
+    
+    
 
-        <!-- End Contact ====
-        ======================================= -->
-
-
-        <!-- =====================================
-        ==== Start Footer -->
-
-        <footer class="text-center bg-dark">
-            <div class="container">
-
-                <!-- Logo -->
-                <a class="logo" href="/index.html">
-                    <img src="img/logo.png" alt="logo">          
-                </a>
-                
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/darraneica-robinson-88599a89/" target="_blank"><i class="icofont icofont-brand-linkedin"></i></a>
-                    <a href="https://github.com/DARRANEICA" target="_blank"><i class="icofont icofont-social-github"></i></a>
-                </div>
-
-                <p>&copy; 2024 <a href="https://github.com/DARRANEICA" target="_blank">Darraneica Robinson.</a> All Rights Reserved.</p>
-            </div>
-        </footer>
-
-        <!-- End Footer ====
-        ======================================= -->
-
-
-
-
-       
-        <!-- jQuery -->
-        <script src="js/jquery-3.0.0.min.js"></script>
-        <script src="js/jquery-migrate-3.0.0.min.js"></script>
-
-        <!-- popper.min -->
-        <script src="js/popper.min.js"></script>
-
-        <!-- bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-
-        <!-- scrollIt -->
-        <script src="js/scrollIt.min.js"></script>
-
-        <!-- animated.headline -->
-        <script src="js/animated.headline.js"></script>
-
-        <!-- jquery.magnific-popup js -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
-
-        <!-- stellar js -->
-        <script src="js/jquery.stellar.min.js"></script>
-
-        <!-- isotope.pkgd.min js -->
-        <script src="js/isotope.pkgd.min.js"></script>
-
-        <!-- validator js -->
-        <script src="js/validator.js"></script>
-
-        <!-- custom scripts -->
-        <script src="js/scripts.js"></script>
-
-        
-    </body>
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/DARRANEICA" target="_blank" class="magnetic"><span>📱</span> GitHub</a>
+            <a href="https://www.linkedin.com/in/darraneica-robinson-88599a89/" target="_blank" class="magnetic"><span>💼</span> LinkedIn</a>
+            <a href="mailto:darraneica@gmail.com" target="_blank" class="magnetic"><span>📧</span> Email</a>
+        </div>
+        <p>&copy; 2025 Darraneica Robinson. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
