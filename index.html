@@ -1,348 +1,181 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darraneica Robinson</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Floral Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="loading">
-        <div class="loading-spinner"></div>
+  <!-- Decorative floating flowers -->
+  <div class="floral-decor">
+    <div class="flower flower-1">🌸</div>
+    <div class="flower flower-2">🌺</div>
+    <div class="flower flower-3">🌷</div>
+    <div class="flower flower-4">🌸</div>
+    <div class="flower flower-5">🌺</div>
+    <div class="flower flower-6">🌼</div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <nav class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <span class="logo-icon">🌸</span>
+          <span class="logo-text">Portfolio</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content-compact">
+        <div class="hero-badge">
+          <span>✨ Welcome to my portfolio!</span>
+        </div>
+        <h1>Full Stack Developer</h1>
+        <p>Passionate about creating efficient solutions through backend development, web development and data automation. Specialized in building robust applications and streamlining data processes.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary">View My Work</button>
+          <button class="btn btn-outline">Get In Touch</button>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <canvas class="particles"></canvas>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <header>
-        <nav>
-            <a href="#" class="logo magnetic">Darraneica Robinson</a>
-            <div class="nav-links">
-                <a href="#skills" class="magnetic">Skills</a>
-                <a href="#projects" class="magnetic">Projects</a>
-                <a href="#contact" class="magnetic">Contact</a>
-            </div>
-            <button class="theme-toggle magnetic" aria-label="Toggle theme">🌙</button>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="typing parallax-element" data-speed="0.5">Full Stack Developer</h1>
-            <p class="parallax-element" data-speed="0.3">Passionate about creating efficient solutions through backend development, web development and data automation. 
-               Specialized in building robust applications and streamlining data processes.</p>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>I'm a passionate creative professional dedicated to bringing ideas to life through thoughtful design and elegant code.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h3>Automation</h3>
+          <p>Making tasks effortless, accurate, and faster.</p>
         </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="fade-up">Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card fade-up glow">
-                <h3>Web Development</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="90"></div>
-                </div>
-                <div class="tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Bootstrap</span>
-                </div>
-            </div>
-            <div class="skill-card fade-up glow">
-                <h3>Data Management</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="85"></div>
-                </div>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Data Cleansing</span>
-                    <span class="tag">Data Analysis</span>
-                    <span class="tag">Flask</span>
-                </div>
-            </div>
-            <div class="skill-card fade-up glow">
-                <h3>Automation</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="65"></div>
-                </div>
-                <div class="tags">
-                    <span class="tag">Process Automation</span>
-                    <span class="tag">Scripting</span>
-                    <span class="tag">Task Scheduling</span>
-                </div>
-            </div>
-            <div class="skill-card fade-up glow">
-                <h3>Backend</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="75"></div>
-                </div>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">API</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">Flask</span>
-                </div>
-            </div>
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Building responsive and performant websites</p>
         </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2 class="fade-up">Featured Projects</h2>
-        <div class="project-filters fade-up">
-            <button class="filter-btn magnetic active" data-filter="all">All</button>
-            <button class="filter-btn magnetic" data-filter="web">Web Development</button>
-            <button class="filter-btn magnetic" data-filter="python">Python</button>
+        <div class="skill-card">
+          <div class="skill-icon">✨</div>
+          <h3>Brand Identity</h3>
+          <p>Crafting unique visual experiences</p>
         </div>
-        <div class="projects-grid">
-            <div class="project-card fade-up glow" data-category="python">
-                <div class="project-card-inner">
-                    <img src="/img/healthcare_database.png" alt="Project 1">
-                    <div class="project-content">
-                        <h3>Healthcare Database Tool</h3>
-                        <p>A web-based application developed for managing patient data and utilizing CSV files.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/healthcare_database" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                            <a href="https://healthcare-database-4ubp.onrender.com" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="skill-card">
+          <div class="skill-icon">🌸</div>
+          <h3>Creative Direction</h3>
+          <p>Leading projects with artistic vision</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>A collection of my recent work showcasing creativity, technical skills, and attention to detail.</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/placeholder.svg?height=400&width=600" alt="Automation Dashboard">
+          </div>
+          <div class="project-content">
+            <h3>Automation Dashboard</h3>
+            <p>Streamlined workflow automation platform for businesses</p>
+            <div class="project-tags">
+              <span class="tag">Automation</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">Web</span>
             </div>
-            <div class="project-card fade-up glow" data-category="web">
-                <div class="project-card-inner">
-                    <img src="/img/web-scraping.png" alt="Project 2">
-                    <div class="project-content">
-                        <h3>Web Scraping Service Website</h3>
-                        <p>A web scraping service automates data extraction, cleansing, and organization to help businesses track trends and gain valuable insights.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/webscraping" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                            <a href="https://rococo-sfogliatella-22b516.netlify.app/" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+            <button class="btn btn-outline btn-full">View Project</button>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/placeholder.svg?height=400&width=600" alt="Creative Studio">
+          </div>
+          <div class="project-content">
+            <h3>Creative Studio</h3>
+            <p>Portfolio website for a design agency</p>
+            <div class="project-tags">
+              <span class="tag">UI/UX</span>
+              <span class="tag">Branding</span>
+              <span class="tag">Web</span>
             </div>
-             <div class="project-card fade-up glow" data-category="python">
-                <div class="project-card-inner">
-                    <img src="/img/automation-tool.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>Automation Tool</h3>
-                        <p>An automation tool that simplifies data extraction, cleansing, and organization, providing accurate insights for better decision-making.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">Excel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/automation" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                            <a href="https://automation-p2ud.onrender.com" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+            <button class="btn btn-outline btn-full">View Project</button>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/placeholder.svg?height=400&width=600" alt="Wellness App">
+          </div>
+          <div class="project-content">
+            <h3>Wellness App</h3>
+            <p>Mobile app design for mental health and meditation</p>
+            <div class="project-tags">
+              <span class="tag">Mobile</span>
+              <span class="tag">UX</span>
+              <span class="tag">Health</span>
             </div>
+            <button class="btn btn-outline btn-full">View Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="project-card fade-up glow" data-category="python">
-                <div class="project-card-inner">
-                    <img src="/img/financial_model.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>Healthcare Financial Tool</h3>
-                        <p>This project is a Flask-based financial dashboard for the healthcare industry, 
-                            featuring profit calculations and interactive visualizations.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">Excel</span>
-                            <span class="tag">PowerBI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/financial_model" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                            <a href="https://financial-model-tpwc.onrender.com/" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-up glow" data-category="technical">
-                <div class="project-card-inner">
-                    <img src="/img/email-marketing.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>Healthcare Email Campaign</h3>
-                        <p>This project is a healthcare email marketing campaign that encourages patients to schedule regular checkups by emphasizing the importance of preventive care.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Data Analytics</span>
-                            <span class="tag">Automation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/healthcare-campaign" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                            <a href="https://radiant-banoffee-52b82d.netlify.app/" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="project-card fade-up glow" data-category="web">
-                <div class="project-card-inner">
-                    <img src="/img/blog.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>Blog</h3>
-                        <p>This project is a blog that is created to write and keep up with technology updates.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Writing</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/blog" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                            <a href="https://helpful-frangollo-b1a7e1.netlify.app/" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-up glow" data-category="web">
-                <div class="project-card-inner">
-                    <img src="/img/calcuator.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>Calculator</h3>
-                        <p>This project is a calculator that adds, subtracts, and divides. It also has display function.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/calculator-app" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                            <a href="https://whimsical-tiramisu-86047f.netlify.app/" target="_blank" class="magnetic"><span>💻</span> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>       
-
-            <div class="project-card fade-up glow" data-category="python">
-                <div class="project-card-inner">
-                    <img src="/img/clinical.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>Clinical Health Management System</h3>
-                        <p>A small management system using Python. This project was created to demonstrate core skills in software development and data analysis.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQLite</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/clinic-project" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="project-card fade-up glow" data-category="python">
-                <div class="project-card-inner">
-                    <img src="/img/algorithmbot.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>AlgorithmBot</h3>
-                        <p>AlgorithmBot is a chatbot that chats with you about the weather, time, jokes, and even your mood. It remembers your name, does simple math, and responds politely.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">AI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/chat-bot" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-up glow" data-category="python">
-                <div class="project-card-inner">
-                    <img src="/img/tictactoe.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>Tic Tac Toe</h3>
-                        <p>A simple Tic Tac Toe game in Python where Player X plays against a CPU or another player.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Colorama</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/tic-tac-toe-basic" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-up glow" data-category="python">
-                <div class="project-card-inner">
-                    <img src="/img/weather-app-python.png" alt="Project 3">
-                    <div class="project-content">
-                        <h3>Weather App</h3>
-                        <p>This project is a simple weather app that fetches and displays current weather data.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Colorama</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Darraneica/weather-app-basic" target="_blank" class="magnetic"><span>📁</span> View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-</section>
-
-
-    <section class="contact fade-up" id="contact">
-        <h2>Get in Touch</h2>
-        <form class="contact-form glow" id="contactForm" method="POST">
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Let's Work Together</h2>
+        <p>Have a project in mind? I'd love to hear from you. Send me a message and let's create something beautiful.</p>
+      </div>
+      <div class="contact-card">
+        <form class="contact-form">
+          <div class="form-row">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <span class="error-message"></span>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name">
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <span class="error-message"></span>
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="yourname@email.com">
             </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-                <span class="error-message"></span>
-            </div>
-            <input type="hidden" name="_subject" value="New message from your portfolio">
-            <button type="submit" class="magnetic">
-                <span>Send Message</span>
-                <span class="button-icon">📨</span>
-            </button>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message 🌸</button>
         </form>
-    </section>
-    
-    
-
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/DARRANEICA" target="_blank" class="magnetic"><span>📱</span> GitHub</a>
-            <a href="https://www.linkedin.com/in/darraneica-robinson-88599a89/" target="_blank" class="magnetic"><span>💼</span> LinkedIn</a>
-            <a href="mailto:darraneica@gmail.com" target="_blank" class="magnetic"><span>📧</span> Email</a>
+      </div>
+      <div class="social-links">
+        <div class="social-buttons">
+          <button class="btn btn-outline btn-sm"><a href="http://">GitHub</a></button>
+          <button class="btn btn-outline btn-sm"><a href="http://">LinkedIn</a></button>
         </div>
-        <p>&copy; 2025 Darraneica Robinson. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 200px; margin-bottom:-100px;">This website was created by <a href="">Darraneica Robinson.</a></p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
