@@ -1,181 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darraneica Robinson Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Play & Explore</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Decorative floating flowers -->
-  <div class="floral-decor">
-    <div class="flower flower-1">🌸</div>
-    <div class="flower flower-2">🌺</div>
-    <div class="flower flower-3">🌷</div>
-    <div class="flower flower-4">🌸</div>
-    <div class="flower flower-5">🌺</div>
-    <div class="flower flower-6">🌼</div>
-  </div>
+    <!-- Floating Background Elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
 
-  <!-- Header -->
-  <header id="header">
-    <nav class="container">
-      <div class="nav-content">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
         <div class="logo">
-          <span class="logo-icon">🌸</span>
-          <span class="logo-text">Portfolio</span>
+            <span class="logo-text">Darraneica <span class="logo-accent">Robinson</span></span>
         </div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#games" class="nav-link">Games</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#contact" class="nav-link">Connect</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle">
+            <span class="theme-icon">🌙</span>
+        </button>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content-compact">
-        <div class="hero-badge">
-          <span>✨ Welcome to my portfolio!</span>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-line main-name">Darraneica Robinson</span>
+                    <span class="title-line subtitle">Fullstack Developer</span>
+                </h1>
+                <p class="hero-description"> A creative girl who is passionate about coding, games, and books.</p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="scrollToGames()">Play Games</button>
+                    <button class="btn btn-secondary" onclick="scrollToWork()">View Work</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-container">
+                    <div class="rotating-text">
+                        <span>CREATIVE</span>
+                        <span>PLAYFUL</span>
+                        <span>INNOVATIVE</span>
+                        <span>BOLD</span>
+                    </div>
+                    <div class="center-orb"></div>
+                </div>
+            </div>
         </div>
-        <h1>Full Stack Developer</h1>
-        <p>Passionate about creating efficient solutions through backend development, web development and data automation. Specialized in building robust applications and streamlining data processes.</p>
-        <div class="hero-buttons">
-          <button class="btn btn-primary"><a href="#projects">View My Work</a></button>
-          <button class="btn btn-outline"><a href="#contact">Get In Touch</a></button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Developer · Writer </p>
         </div>
-      </div>
+        <div class="about-content">
+            <div class="about-card">
+                <div class="card-icon">🎨</div>
+                <h3>Design Thinking</h3>
+                <p>Crafting pixel-perfect interfaces with attention to every detail</p>
+            </div>
+            <div class="about-card">
+                <div class="card-icon">⚡</div>
+                <h3>Fast Development</h3>
+                <p>Building performant applications with clean, maintainable code</p>
+            </div>
+            <div class="about-card">
+                <div class="card-icon">🎮</div>
+                <h3>Interactive Experiences</h3>
+                <p>Creating engaging and playful user interactions</p>
+            </div>
+        </div>
+        <div class="skills-marquee">
+            <div class="marquee-content">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span><span>AI</span><span>Python</span>
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span><span>AI</span><span>Python</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+        <div class="section-header">
+            <h2 class="section-title">Interactive Games</h2>
+            <p class="section-subtitle">Test your skills and have fun!</p>
+        </div>
+        
+        <div class="games-grid">
+            <!-- Memory Match Game -->
+            <div class="game-card" onclick="openGame('memory')">
+                <div class="game-card-inner">
+                    <div class="game-icon">🧠</div>
+                    <h3>Memory Match</h3>
+                    <p>Test your memory with this classic card matching game</p>
+                    <button class="game-btn">Play Now</button>
+                </div>
+            </div>
+
+            <!-- Catch the Stars Game -->
+            <div class="game-card" onclick="openGame('catch')">
+                <div class="game-card-inner">
+                    <div class="game-icon">⭐</div>
+                    <h3>Catch Stars</h3>
+                    <p>Catch falling stars before they disappear!</p>
+                    <button class="game-btn">Play Now</button>
+                </div>
+            </div>
+
+            <!-- Typing Speed Game -->
+            <div class="game-card" onclick="openGame('typing')">
+                <div class="game-card-inner">
+                    <div class="game-icon">⌨️</div>
+                    <h3>Speed Type</h3>
+                    <p>How fast can you type? Challenge yourself!</p>
+                    <button class="game-btn">Play Now</button>
+                </div>
+            </div>
+
+            <!-- Color Match Game -->
+            <div class="game-card" onclick="openGame('color')">
+                <div class="game-card-inner">
+                    <div class="game-icon">🎨</div>
+                    <h3>Color Rush</h3>
+                    <p>Match colors before time runs out</p>
+                    <button class="work-btn">Play Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work-section">
+        <div class="section-header">
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-subtitle">Projects I'm proud of</p>
+        </div>
+        <div class="work-grid">
+            <div class="work-item">
+                <div class="work-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <div class="work-info">
+                    <h3>Weather App</h3>
+                    <p>Simple weather application that allows users to check current weather in specific locations.</p>
+                    <div class="work-tags">
+                        <span>Python</span>
+                        <button class="work-btn"><a href="https://github.com/Darraneica/weather-app-basic" target="_blank">View</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                <div class="work-info">
+                    <h3>Clinic & Patient Insights System</h3>
+                    <p>A small management system using Python. This project was created to demonstrate core skills in software development and data analysis.</p>
+                    <div class="work-tags">
+                        <span>Python</span>
+                        <span>SQLite</span>
+                        <button class="work-btn"><a href="https://github.com/Darraneica/clinic-project" target="_blank">View</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <div class="work-info">
+                    <h3>Tic Tac Toe</h3>
+                    <p>A simple Tic Tac Toe game in Python where Player X plays against a CPU or another player.</p>
+                    <div class="work-tags">
+                        <span>Python</span>
+                        <span>Colorama</span>
+                      <button class="work-btn"><a href="https://github.com/Darraneica/tic-tac-toe-basic" target="_blank">View</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Ready to create something amazing?</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <a href="mailto:darraneica@gmail.com">darraneica@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <a href="https://www.linkedin.com/in/darraneica-robinson-88599a89/" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📁</div>
+                    <a href="https://github.com/Darraneica" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modals -->
+    <div id="gameModal" class="game-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeGame()">&times;</button>
+            <div id="modalGame"></div>
+        </div>
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-header">
-        <h2>About Me</h2>
-        <p>I'm a passionate creative professional dedicated to bringing ideas to life through thoughtful design and elegant code.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">🤖</div>
-          <h3>Automation</h3>
-          <p>Making tasks effortless, accurate, and faster.</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">💻</div>
-          <h3>Web Development</h3>
-          <p>Building responsive and performant websites</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">✨</div>
-          <h3>Brand Identity</h3>
-          <p>Crafting unique visual experiences</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">⌨️</div>
-          <h3>Programmer</h3>
-          <p>Skilled in HTML, JavaScript, Python and more.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <div class="section-header">
-        <h2>Featured Projects</h2>
-        <p>A collection of my recent work showcasing creativity, technical skills, and attention to detail.</p>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="/img/automation-tool.png" alt="Automation Tool">
-          </div>
-          <div class="project-content">
-            <h3>Automation Tool</h3>
-            <p>An automation tool that simplifies data extraction, cleansing, and organization, providing accurate insights for better decision-making.</p>
-            <div class="project-tags">
-              <span class="tag">Automation</span>
-              <span class="tag">Dashboard</span>
-              <span class="tag">Web</span>
-            </div>
-            <button class="btn btn-outline btn-full"><a href="https://github.com/Darraneica/automation" target="_blank">View Project</a></button>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image">
-            <img src="/img/web-scraping.png" alt="Creative Website">
-          </div>
-          <div class="project-content">
-            <h3>Creative Website</h3>
-            <p>A web scraping service automates data extraction, cleansing, and organization to help businesses track trends and gain valuable insights.</p>
-            <div class="project-tags">
-              <span class="tag">UI/UX</span>
-              <span class="tag">Branding</span>
-              <span class="tag">Web</span>
-            </div>
-            <button class="btn btn-outline btn-full"><a href="https://github.com/Darraneica/webscraping">View Project</a></button>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image">
-            <img src="/img/algorithmbot.png" alt="AlgorithmBot">
-          </div>
-          <div class="project-content">
-            <h3>AlgorithmBot</h3>
-            <p>AlgorithmBot is a chatbot that chats with you about the weather, time, jokes, and even your mood. It remembers your name, does simple math, and responds politely.</p>
-            <div class="project-tags">
-              <span class="tag">AI</span>
-              <span class="tag">Python</span>
-              <span class="tag">Automation</span>
-            </div>
-            <button class="btn btn-outline btn-full">View Project</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2>Let's Work Together</h2>
-        <p>Have a project in mind? I'd love to hear from you. Send me a message and let's create something beautiful.</p>
-      </div>
-      <div class="contact-card">
-        <form class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Your name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="yourname@email.com">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="6" placeholder="Tell me about your project..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message 🌸</button>
-        </form>
-      </div>
-      <div class="social-links">
-        <div class="social-buttons">
-          <button class="btn btn-outline btn-sm"><a href="https://github.com/Darraneica" target="_blank">GitHub</a></button>
-          <button class="btn btn-outline btn-sm"><a href="https://www.linkedin.com/in/darraneica-robinson-88599a89/" target="_blank">LinkedIn</a></button>
-        </div>
-      </div>
-    </div>
-    <p style="text-align: center; margin-top: 200px; margin-bottom:-100px;">This website was created by <a href="https://github.com/Darraneica" target="_blank">Darraneica Robinson.</a></p>
-  </section>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
